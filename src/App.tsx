@@ -9,7 +9,7 @@ import { Nav } from './components/nav/Nav'
 import { Footer } from './components/Footer/Footer'
 import { Admin } from './components/Admin/Admin'
 import { GuardedRoute } from './guards/auth.guard'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 
 
