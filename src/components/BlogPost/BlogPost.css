@@ -1,0 +1,20 @@
+.single-blog-post-image {
+    width: 100%;
+    background-color: red;
+    color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.post-content-container {
+   padding-top: 20px;
+   padding-right: 50px;
+   padding-left: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .single-blog-post-image {
+        height: 300px;
+    }
+}

@@ -1,0 +1,7 @@
+
+-> screen width based positioning of elements []
+// need to add the media query inside the js and change position of image and post content based on the media screen
+// for instance if the screen is desktop or laptop then consequtive post's image and cotent positions are reserved 
+// for tablets and mobile positions of image and content are not reversed
+
+-> footer (all rights reserved in center)
