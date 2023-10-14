@@ -4,6 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export const BlogPosts = (props: any) => {
     console.log("props", props);
+    const navigate = useNavigate();
+    document.addEventListener('keydown', (e) => { 
+        // check if the key pressed is CTRL + A or not
+        console.log("key pressed", e);
+        console.log("key pressed keyCode", e.keyCode);
+        if(e.ctrlKey && e.keyCode == 65){
+            console.log("ctrl + a pressed");
+            navigate('/admin');
+        }
+     });
     const dummy_posts = [
                         {
                             _id: "1",
@@ -15,7 +25,7 @@ export const BlogPosts = (props: any) => {
                                 electronic typesetting, remaining essentially unchanged. It was popularised in
                                 the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-                            image: "/images/post01.jpg"
+                            image: "images/post01.jpg"
                         },
                         {
                             _id: "2",
@@ -27,7 +37,7 @@ export const BlogPosts = (props: any) => {
                                 electronic typesetting, remaining essentially unchanged. It was popularised in
                                 the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-                            image: "/images/post02.jpg"
+                            image: "images/post02.jpg"
                         },
                         {
                             _id: "3",
@@ -39,7 +49,7 @@ export const BlogPosts = (props: any) => {
                                 electronic typesetting, remaining essentially unchanged. It was popularised in
                                 the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-                            image: "/images/post03.jpg"
+                            image: "images/post03.jpg"
                         },
                         {
                             _id: "4",
@@ -110,13 +120,15 @@ export const BlogPosts = (props: any) => {
         }
     }
 
-    const navigate = useNavigate();
+ 
 
     function handlePostClick(postId: any){
         return () => {
             navigate('/blog/' + postId);
         }
     }
+
+
     return (
                         <div className='posts'>
                            {
