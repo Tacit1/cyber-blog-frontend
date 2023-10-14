@@ -19,7 +19,7 @@ export const BlogPost = () => {
     const [post, setPost] = useState(dummy_posts);
     const params = useParams();
     useEffect(() => {
-        axios.get(`http://localhost:3000/posts/${params.id}`).then((response: any) => {
+        axios.get(`/service/posts/${params.id}`).then((response: any) => {
         console.log("Response of posts", response.data);
         if(response && response.data && response.data.length){
             setPost(response.data[0]);
@@ -31,7 +31,7 @@ export const BlogPost = () => {
     console.log("params", params);                     
     return (
                 <div className='post'>
-                    <div className='single-blog-post-image' style={{backgroundImage: `url(http://localhost:3000/public/${post.image})`}}>
+                    <div className='single-blog-post-image' style={{backgroundImage: `url(/service/3000/public/${post.image})`}}>
 
                     </div>
                     {/* image first, caraousel way */}

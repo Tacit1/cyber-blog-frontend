@@ -67,7 +67,7 @@ export const BlogPosts = (props: any) => {
     const [posts, setPosts] = useState(dummy_posts);    
     
     useEffect(() => {
-        axios.get('http://localhost:3000/posts').then((response: any) => {
+        axios.get('/service/posts').then((response: any) => {
         console.log("Response of posts", response.data);
         if(response && response.data && response.data.length){
             setPosts(response.data);
