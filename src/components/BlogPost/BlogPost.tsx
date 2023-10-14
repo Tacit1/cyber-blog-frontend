@@ -31,7 +31,7 @@ export const BlogPost = () => {
     console.log("params", params);                     
     return (
                 <div className='post'>
-                    <div className='single-blog-post-image' style={{backgroundImage: `url(/service/3000/public/${post.image})`}}>
+                    <div className='single-blog-post-image' style={{backgroundImage: `url(/service/public/${post.image})`}}>
 
                     </div>
                     {/* image first, caraousel way */}
