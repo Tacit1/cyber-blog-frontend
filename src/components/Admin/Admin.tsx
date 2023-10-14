@@ -35,7 +35,7 @@ export const Admin = () => {
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: 'http://localhost:3000/post',
+            url: '/service/post',
             data : formData
           };
         axios.request(config).then((response: any) => {

@@ -137,7 +137,7 @@ export const BlogPosts = (props: any) => {
                                 const inverseColor = invertColor(color, true);
                                     return (
                                         <div key={post.title + "-" + i} className='posts-container' onClick={handlePostClick(post._id)}>
-                                            <div className='post-image' style={{backgroundImage: `url('http://localhost:3000/public/${post.image}')`}}>
+                                            <div className='post-image' style={{backgroundImage: `url('/service/public/${post.image}')`}}>
                                                 
                                             </div>
                                             <div className='post-content' style={{backgroundColor: color, color: inverseColor}}>
