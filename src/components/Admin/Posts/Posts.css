@@ -1,25 +1,25 @@
-.posts-container {
+.admin-posts-container {
     margin: auto;
     width: 700px;
 }
-.posts {
+.admin-posts {
  display: flex;
  flex-direction: column;
 }
-.post {
+.admin-post {
     margin: 10px;
     border: 1px solid black;
 }
-.title {
+.admin-title {
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px;
 }
-.description {
+.admin-description {
     font-size: 1em;
     margin: 10px;
 }
-.post-actions {
+.admin-post-actions {
     display: flex;
     justify-content: center;
     align-items: center;

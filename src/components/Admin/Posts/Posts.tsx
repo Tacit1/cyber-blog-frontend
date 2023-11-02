@@ -116,19 +116,19 @@ export const Posts = () => {
 
     return (
         <>
-        <div className='posts-container'>
-        <div className="posts">
+        <div className='admin-posts-container'>
+        <div className="admin-posts">
             {
                 posts.map((post, i) => {
                     return (
-                            <div key={post.title + "-" + i} className='post'>
-                                <div className='title'>
+                            <div key={post.title + "-" + i} className='admin-post'>
+                                <div className='admin-title'>
                                     {i} - {post.title}
                                 </div>
-                                <div className='description'>
+                                <div className='admin-description'>
                                         {post.content.trim().substring(0, 100)}...
                                 </div>
-                                <div className='post-actions'>
+                                <div className='admin-post-actions'>
                                     <div>
                                         <label>Order </label>
                                         <input type='number' onChange={ updateOrder(post._id) } value={order.get(post._id)}></input>
