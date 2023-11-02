@@ -67,7 +67,7 @@ export const Posts = () => {
     }
 
     function updatePostOrder(id: any){
-        return (e: any) => {
+        return () => {
             console.log("updating post =>" , id);
             const newOrder = order.get(id) ? order.get(id): 0;
             console.log("post order => ", newOrder);
