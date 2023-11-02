@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import './nav.css'
+import './Nav.css'
 export class Nav extends Component {
         componentDidMount(){
 

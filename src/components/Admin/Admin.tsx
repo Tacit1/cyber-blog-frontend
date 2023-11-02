@@ -40,8 +40,10 @@ export const Admin = () => {
           };
         axios.request(config).then((response: any) => {
             console.log("axios response", response);
+            window.alert("Post created Sucessfully");
         }).catch((error: any) => {
             console.log("erorr in fetching response", error)
+            window.alert("error creating post");
         })
     }
 
