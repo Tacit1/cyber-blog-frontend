@@ -1,0 +1,27 @@
+.posts-container {
+    margin: auto;
+    width: 700px;
+}
+.posts {
+ display: flex;
+ flex-direction: column;
+}
+.post {
+    margin: 10px;
+    border: 1px solid black;
+}
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+}
+.description {
+    font-size: 1em;
+    margin: 10px;
+}
+.post-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
