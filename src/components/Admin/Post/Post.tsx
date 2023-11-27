@@ -37,6 +37,7 @@ export const Post = () => {
         console.log("Response of posts", response.data);
         if(response && response.data && response.data.length){
             console.log("response.data", response.data);
+            console.log("previous post", post);
             setPost(response.data[0]);
             quill.root.innerHTML = response.data[0].content;
             setTitle(response.data[0].title);
