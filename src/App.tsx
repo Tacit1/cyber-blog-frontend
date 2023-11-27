@@ -11,6 +11,7 @@ import { Admin } from './components/Admin/Admin'
 import { GuardedRoute } from './guards/auth.guard'
 import { useState } from 'react'
 import { Posts } from './components/Admin/Posts/Posts'
+import { Post } from './components/Admin/Post/Post'
 
 
 
@@ -40,6 +41,10 @@ function App() {
     {
       path: '/admin/posts',
       element: GuardedRoute(<Posts></Posts>, isAuthenticated, successfulLogin),
+    },
+    {
+      path: '/admin/posts/:id',
+      element: GuardedRoute(<Post></Post>, isAuthenticated, successfulLogin),
     }
   ])
 

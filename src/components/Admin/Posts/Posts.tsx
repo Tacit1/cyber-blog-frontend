@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import './Posts.css'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export const Posts = () => {
+    const navigate = useNavigate();
     const dummy_posts = [
         {
             _id: "1",
@@ -98,6 +100,13 @@ export const Posts = () => {
         }
     }
 
+    function editContent(id: any){
+        return () => {
+            console.log("naviating to post", id);
+            navigate(`/admin/posts/${id}`)
+        }
+    }
+
     useEffect(() => {
         axios.get('/service/posts').then((response: any) => {
         console.log("Response of posts", response.data);
@@ -135,6 +144,9 @@ export const Posts = () => {
                                     </div>
                                     <div>
                                         <button onClick={updatePostOrder(post._id)}>Update Order</button>
+                                    </div>
+                                    <div>
+                                        <button onClick={editContent(post._id)}>Edit Content</button>
                                     </div>
                                     <div>
                                         <button onClick={deletePost(post._id)}>Delete Post</button>
