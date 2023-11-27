@@ -66,7 +66,7 @@ export const Post = () => {
           };
         axios.request(config).then((response: any) => {
             console.log("axios response", response);
-            window.alert("Post created successfully")
+            window.alert("Post updated successfully")
         }).catch((error: any) => {
             console.log("erorr in fetching response", error)
             window.alert("error creating post");
